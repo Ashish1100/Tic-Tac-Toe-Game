@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tic Tac Toe</h1>
+    <div id="scoreboard">
+      <span id="player_score">Player: 0</span>
+      <span id="tie_score">Draws: 0</span>
+      <span id="computer_score">Computer: 0</span>
+    </div>
+  </header>
+
+  <!-- Options Modal -->
+  <div id="optionsDlg" class="modal">
+    <div class="modal-content">
+      <h2>Game Options</h2>
+      <div class="option-group">
+        <p>Select Difficulty:</p>
+        <label>
+          <input type="radio" name="difficulty" value="easy" checked> Easy
+        </label>
+        <label>
+          <input type="radio" name="difficulty" value="hard"> Hard
+        </label>
+      </div>
+      <div class="option-group">
+        <p>Select your symbol:</p>
+        <label>
+          <input type="radio" name="symbol" id="symX" checked> X (you go first)
+        </label>
+        <label>
+          <input type="radio" name="symbol" id="symO"> O
+        </label>
+      </div>
+      <button onclick="getOptions()">Start Game</button>
+    </div>
+  </div>
+
+  <!-- Game Board -->
+  <table id="table_game">
+    <tr>
+      <td class="td_game" id="cell0" onclick="cellClicked(0)"></td>
+      <td class="td_game" id="cell1" onclick="cellClicked(1)"></td>
+      <td class="td_game" id="cell2" onclick="cellClicked(2)"></td>
+    </tr>
+    <tr>
+      <td class="td_game" id="cell3" onclick="cellClicked(3)"></td>
+      <td class="td_game" id="cell4" onclick="cellClicked(4)"></td>
+      <td class="td_game" id="cell5" onclick="cellClicked(5)"></td>
+    </tr>
+    <tr>
+      <td class="td_game" id="cell6" onclick="cellClicked(6)"></td>
+      <td class="td_game" id="cell7" onclick="cellClicked(7)"></td>
+      <td class="td_game" id="cell8" onclick="cellClicked(8)"></td>
+    </tr>
+  </table>
+
+  <!-- Winner Announcement Modal -->
+  <div id="winAnnounce" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('winAnnounce')">&times;</span>
+      <h2 id="winText"></h2>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Leaderboard Modal -->
+  <div id="leaderboardDlg" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('leaderboardDlg')">&times;</span>
+      <h2>Leaderboard</h2>
+      <div id="leaderboardList"></div>
+    </div>
+  </div>
+
+  <button id="showLeaderboard" onclick="showLeaderboard()">Leaderboard</button>
+
+  <!-- Audio Elements -->
+  <audio id="moveSound" src="move.mp3"></audio>
+  <audio id="winSound" src="win.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+<br>
+<footer class="footer">
+  <p class="watermark">Created with ❤️ by Ashish.</p>
+</footer>
+</html>
