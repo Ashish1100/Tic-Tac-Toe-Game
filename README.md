@@ -28,9 +28,3 @@ You can play this game [Here](https://ashish1100.github.io/Tic-Tac-Toe-Game/).
 5. Click on an empty space on the grid to place your symbol.
 6. Players take turns clicking on empty spaces until one player wins or the game ends in a draw.
 7. As soon as the game ends, the game automatically resets, allowing players to start a new round.
-
-
-## Future Improvements
-- Implementing more advanced AI algorithms for harder difficulty levels.
-- Adding animations and effects to enhance the user experience.
-- Implementing a scoreboard to track the number of wins for each player.
