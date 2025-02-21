@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Using a modern font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Tic Tac Toe</h1>
+    <div id="scoreboard">
+      <span id="player_score">Player: 0</span>
+      <span id="tie_score">Draws: 0</span>
+      <span id="computer_score">Computer: 0</span>
+    </div>
+  </header>
+  
+  <div id="gameContainer">
+    <table id="table_game">
+      <tr>
+        <td id="cell0" class="td_game" onclick="cellClicked(0)"></td>
+        <td id="cell1" class="td_game" onclick="cellClicked(1)"></td>
+        <td id="cell2" class="td_game" onclick="cellClicked(2)"></td>
+      </tr>
+      <tr>
+        <td id="cell3" class="td_game" onclick="cellClicked(3)"></td>
+        <td id="cell4" class="td_game" onclick="cellClicked(4)"></td>
+        <td id="cell5" class="td_game" onclick="cellClicked(5)"></td>
+      </tr>
+      <tr>
+        <td id="cell6" class="td_game" onclick="cellClicked(6)"></td>
+        <td id="cell7" class="td_game" onclick="cellClicked(7)"></td>
+        <td id="cell8" class="td_game" onclick="cellClicked(8)"></td>
+      </tr>
+    </table>
+  </div>
+  
+  <!-- Options Modal -->
+  <div id="optionsDlg" class="modal">
+    <div class="modal-content">
+      <h2>Game Options</h2>
+      <div class="option-group">
+        <p>Select Difficulty:</p>
+        <label><input type="radio" name="difficulty" value="easy" checked> Easy</label>
+        <label><input type="radio" name="difficulty" value="hard"> Hard</label>
+      </div>
+      <div class="option-group">
+        <p>Select your symbol:</p>
+        <label><input type="radio" name="symbol" id="symX" value="X" checked> X (you go first)</label>
+        <label><input type="radio" name="symbol" id="symO" value="O"> O</label>
+      </div>
+      <button onclick="getOptions()">Start Game</button>
+    </div>
+  </div>
+  
+  <!-- Winner Modal -->
+  <div id="winAnnounce" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('winAnnounce')">&times;</span>
+      <p id="winText"></p>
+      <button onclick="restartGame()">Play Again</button>
+    </div>
+  </div>
+  
+  <!-- Leaderboard Modal -->
+  <div id="leaderboardDlg" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('leaderboardDlg')">&times;</span>
+      <h2>Leaderboard</h2>
+      <div id="leaderboardList"></div>
+      <button onclick="closeModal('leaderboardDlg')">Close</button>
+    </div>
+  </div>
+  
+  <button id="showLeaderboard" onclick="showLeaderboard()">View Leaderboard</button>
+  <br>
+<br>
+  <!-- Footer with watermark and dynamic copyright -->
+  <footer class="footer">
+    <p class="watermark">Created with ❤️ by Ashish.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+  <!-- Inline script to update the current year dynamically -->
+  <script>
+    document.getElementById("currentYear").innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
