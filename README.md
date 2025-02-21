@@ -5,7 +5,7 @@ This is a simple Tic Tac Toe game implemented using HTML, CSS, and JavaScript. T
 
 You can play this game [Here](https://ashish1100.github.io/Tic-Tac-Toe-Game/).
 ## Screenshots
-![Screenshot 2025-02-21 123351](https://github.com/user-attachments/assets/59561054-da64-4255-a7dd-42aa2fb08929)
+![Screenshot 2025-02-21 130622](https://github.com/user-attachments/assets/d9c368d9-2cba-4c88-8538-58b366af3ffc)
 
 
 ## Features
